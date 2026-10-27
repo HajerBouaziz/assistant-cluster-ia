@@ -19,7 +19,7 @@ def creer_app() -> Flask:
 
     @app.get("/api/sante")
     def sante():
-        return jsonify(statut="ok")
+        return jsonify(statut="ko")  # ⬅️ BUG VOLONTAIRE
 
     @app.get("/api/documents")
     def documents():
@@ -43,3 +43,4 @@ app = creer_app()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+    
